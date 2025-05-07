@@ -1,7 +1,6 @@
 "use client";
 
 import { generateMetadata } from "@/utils/generateMetadata";
-import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
     const metadata = generateMetadata(
       "Accueil",
       "Prytech est une agence web et digitale spécialisée dans la création de sites web sur mesure...",
-      
     );
 
     // Mettre à jour le titre de la page
