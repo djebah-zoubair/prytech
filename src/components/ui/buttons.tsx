@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { IconProps } from "@/types/iconProps";
+import Spinner from "./spinner";
 
 interface ButtonProps {
   size?: "xs" | "sm" | "base" | "lg" | "xl";
@@ -114,22 +115,43 @@ const Button = ({
   return (
     <button
       type="button"
-      className={cn(variantStyles, sizeStyles, className, "")}
+      className={cn(
+        variantStyles,
+        sizeStyles,
+        iconSize,
+        isLoading && "cursor-wait",
+        className,
+        "relative animate"
+      )}
       disabled={isDisabled}
     >
-      {IconComponent && variants === "icon" ? (
-        <IconComponent size={iconSize} />
-      ) : (
-        <div className={cn(IconComponent && "flex items-center gap-1")}>
-          {IconComponent && iconPosition == "left" && (
-            <IconComponent size={iconSize} />
-          )}
-          {children}
-          {IconComponent && iconPosition == "right" && (
-            <IconComponent size={iconSize} />
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          {variants === "accent" ||
+          (variants === "icon" && icontheme === "accent") ||
+          icontheme === "gray" ? (
+            <Spinner size="small" variant="white" />
+          ) : (
+            <Spinner size="small" />
           )}
         </div>
       )}
+
+      <div className={cn(isLoading && "invisible")}>
+        {IconComponent && variants === "icon" ? (
+          <IconComponent size={iconSize} />
+        ) : (
+          <div className={cn(IconComponent && "flex items-center gap-2")}>
+            {IconComponent && iconPosition == "left" && (
+              <IconComponent size={iconSize} />
+            )}
+            {children}
+            {IconComponent && iconPosition == "right" && (
+              <IconComponent size={iconSize} />
+            )}
+          </div>
+        )}
+      </div>
     </button>
   );
 };

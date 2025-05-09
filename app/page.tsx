@@ -49,23 +49,29 @@ export default function Home() {
             Eat Apple
           </Button>
           <Button
-            size="sm"
+            size="xs"
             variants="icon"
             icon={{ icon: LuApple }}
             icontheme="accent"
           />
           <Button
-            size="sm"
+            size="xs"
             variants="icon"
             icon={{ icon: LuApple }}
             icontheme="secondary"
           />
           <Button
-            size="sm"
+            size="xs"
             variants="icon"
             icon={{ icon: LuApple }}
             icontheme="gray"
           />
+          <Button size="xs" isLoading>
+            Accent
+          </Button>
+          <Button size="xs" variants="icon" isLoading>
+            Accent
+          </Button>
         </div>
       </main>
     </div>
