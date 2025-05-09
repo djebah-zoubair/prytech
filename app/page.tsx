@@ -1,9 +1,9 @@
 "use client";
 
 import Button from "@/components/ui/buttons";
-import Typography from "@/components/ui/typography";
 import { generateMetadata } from "@/utils/generateMetadata";
 import { useEffect } from "react";
+import { LuApple } from "react-icons/lu";
 
 export default function Home() {
   useEffect(() => {
@@ -32,68 +32,40 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div className="flex gap-4">
-          <Button size="xs">Accent</Button>
+          <Button size="xs">Eat an apple</Button>
           <Button size="xs" variants="secondary">
-            Accent
+            Eat an apple
           </Button>
           <Button size="xs" variants="outline">
-            Accent
+            Eat an apple
           </Button>
           <Button size="xs" variants="disabled">
-            Accent
+            Eat an apple
           </Button>
-        </div>
-
-        <div className="flex gap-4">
-          <Button size="sm">Accent</Button>
-          <Button size="sm" variants="secondary">
-            Accent
+          <Button size="xs" icon={{ icon: LuApple }}>
+            Eat Apple
           </Button>
-          <Button size="sm" variants="outline">
-            Accent
+          <Button size="xs" icon={{ icon: LuApple }} iconPosition="left">
+            Eat Apple
           </Button>
-          <Button size="sm" variants="disabled">
-            Accent
-          </Button>
-        </div>
-
-        <div className="flex gap-4">
-          <Button size="base">Accent</Button>
-          <Button size="base" variants="secondary">
-            Accent
-          </Button>
-          <Button size="base" variants="outline">
-            Accent
-          </Button>
-          <Button size="base" variants="disabled">
-            Accent
-          </Button>
-        </div>
-
-        <div className="flex gap-4">
-          <Button size="lg">Accent</Button>
-          <Button size="lg" variants="secondary">
-            Accent
-          </Button>
-          <Button size="lg" variants="outline">
-            Accent
-          </Button>
-          <Button size="lg" variants="disabled">
-            Accent
-          </Button>
-        </div>
-
-        <div className="flex gap-4">
-          <Button size="xl">Accent</Button>
-          <Button size="xl" variants="secondary">
-            Accent
-          </Button>
-          <Button size="xl" variants="outline">
-            Accent
-          </Button>
-          <Button size="xl" variants="disabled">
-            Accent
-          </Button>
+          <Button
+            size="sm"
+            variants="icon"
+            icon={{ icon: LuApple }}
+            icontheme="accent"
+          />
+          <Button
+            size="sm"
+            variants="icon"
+            icon={{ icon: LuApple }}
+            icontheme="secondary"
+          />
+          <Button
+            size="sm"
+            variants="icon"
+            icon={{ icon: LuApple }}
+            icontheme="gray"
+          />
         </div>
       </main>
     </div>
