@@ -1,6 +1,7 @@
 "use client";
 
 import { generateMetadata } from "@/utils/generateMetadata";
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -26,5 +27,10 @@ export default function Home() {
     metaDescription.content = metadata.description; // Ce code s'exécute une seule fois au premier rendu de la page
   }, []);
 
-  return <div className="div">t</div>;
+  return (
+    <div className="flex flex-col">
+      <Link href={"/button"}>Button</Link>
+      <Link href={"/typography"}>Typography</Link>
+    </div>
+  );
 }

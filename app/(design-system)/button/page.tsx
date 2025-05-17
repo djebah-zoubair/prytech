@@ -3,14 +3,6 @@ import Typography from "@/components/ui/typography";
 import { LuApple } from "react-icons/lu";
 
 export default function ButtonPage() {
-  const sizes = ["sm", "default", "lg", "icon"] as const;
-  const variants = [
-    "default",
-    "outline",
-    "destructive",
-    "ghost",
-    "link",
-  ] as const;
   return (
     <div className="space-y-8">
       <div className="space-y-4">
@@ -35,119 +27,6 @@ export default function ButtonPage() {
           </Typography>
         </div>
       </div>
-      {/* <div className="flex flex-col rounded-xl border border-dashed border-gray-300">
-        <div className="flex">
-          <div className="py-4">
-            <Typography components="p" variants="body-base" weight="regular">
-              xs
-            </Typography>
-          </div>
-          <div className="flex flex-wrap items-center gap-4 py-4">
-            <Button size="xs">Eat an apple</Button>
-            <Button size="xs" variants="secondary">
-              Eat an apple
-            </Button>
-            <Button size="xs" variants="outline">
-              Eat an apple
-            </Button>
-            <Button size="xs" variants="disabled">
-              Eat an apple
-            </Button>
-            <Button size="xs" icon={{ icon: LuApple }}>
-              Eat Apple
-            </Button>
-            <Button size="xs" icon={{ icon: LuApple }} iconPosition="left">
-              Eat Apple
-            </Button>
-            <Button
-              size="xs"
-              variants="icon"
-              icon={{ icon: LuApple }}
-              icontheme="accent"
-            />
-            <Button
-              size="xs"
-              variants="icon"
-              icon={{ icon: LuApple }}
-              icontheme="secondary"
-            />
-            <Button
-              size="xs"
-              variants="icon"
-              icon={{ icon: LuApple }}
-              icontheme="gray"
-            />
-            <Button size="xs" isLoading>
-              Accent
-            </Button>
-            <Button size="xs" variants="icon" isLoading>
-              Accent
-            </Button>
-            <Button size="xs" variants="icon" isLoading icontheme="secondary">
-              Accent
-            </Button>
-            <Button size="xs" variants="icon" isLoading icontheme="gray">
-              Accent
-            </Button>
-          </div>
-        </div>
-
-        <div className="flex">
-          <div className="py-4">
-            <Typography components="p" variants="body-base" weight="regular">
-              sm
-            </Typography>
-          </div>
-          <div className="flex flex-wrap items-center gap-4 py-4">
-            <Button size="sm">Eat an apple</Button>
-            <Button size="sm" variants="secondary">
-              Eat an apple
-            </Button>
-            <Button size="sm" variants="outline">
-              Eat an apple
-            </Button>
-            <Button size="sm" variants="disabled">
-              Eat an apple
-            </Button>
-            <Button size="sm" icon={{ icon: LuApple }}>
-              Eat Apple
-            </Button>
-            <Button size="sm" icon={{ icon: LuApple }} iconPosition="left">
-              Eat Apple
-            </Button>
-            <Button
-              size="sm"
-              variants="icon"
-              icon={{ icon: LuApple }}
-              icontheme="accent"
-            />
-            <Button
-              size="sm"
-              variants="icon"
-              icon={{ icon: LuApple }}
-              icontheme="secondary"
-            />
-            <Button
-              size="sm"
-              variants="icon"
-              icon={{ icon: LuApple }}
-              icontheme="gray"
-            />
-            <Button size="sm" isLoading>
-              Accent
-            </Button>
-            <Button size="sm" variants="icon" isLoading>
-              Accent
-            </Button>
-            <Button size="sm" variants="icon" isLoading icontheme="secondary">
-              Accent
-            </Button>
-            <Button size="sm" variants="icon" isLoading icontheme="gray">
-              Accent
-            </Button>
-          </div>
-        </div>
-      </div> */}
 
       <div className="space-y-4 rounded-xl border border-dashed border-gray-300">
         <div className="flex flex-col gap-2 border-b border-dashed border-gray-300 p-4 lg:flex-row">
